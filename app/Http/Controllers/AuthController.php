@@ -51,7 +51,7 @@ public function register(Request $request)
         return redirect()->back()->withErrors(['error' => 'Gagal menyimpan pengguna: ' . $e->getMessage()]);
     }
 
-    return redirect('/login')->with('success', 'Registrasi berhasil!');
+    return redirect('auth.login')->with('success', 'Registrasi berhasil!');
 }
 
 }
